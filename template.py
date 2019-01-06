@@ -1,47 +1,28 @@
 # Вывод в файл
 output_file = 'index.html'
 
-# Адрес, который надо парсить
-url = 'http://93.92.65.26/aspx/Gorod.htm'
-
-# Как разделить предприятия
-#organizations = ['ООО УК ЖСК', 'ООО Электрические', 'ЭУ', 'Электрические', 'ОАО', 'ПАО', 'КрасТЭК', 'АО', 'ТСЖ', 'СибЭР', 'Часное лицо', 'ООО', 'УК']
-organizations = ['ПАО МРСК Сибири', 'ООО КрасТЭК', 'ООО Кульбытстрой', 'МП Горэлектротранс', 'ООО Аквилон', 'МБОУ', 'ООО УК ЖСК', 'ООО Электрические', 'ПАО МРСК Сибири Красноярскэнерго', 'АО КТТК', 'ООО Сервис-техно', 'ООО Электрические сети Сибири', 'ЭУ ООО КрасКом']
-
-# Типы отключений
-causes = ['аварийное', 'плановое']
+# scrapping page
+scrap_url = 'http://93.92.65.26/aspx/Gorod.htm'
 
 # Районы города. Пока так
-region = {
-    'Цен': 'Центральный район',
-    'Сов': 'Советский район',
-    'Св': 'Свердловский район',
-    'Окт': 'Октябрьский район',
-    'Лен': 'Ленинский район',
-    'Кир': 'Кировский район',
-    'Жел': 'Железнодорожный район',
-    'Окт Жел': 'Октябрьский район',
-    'Жел Окт': 'Железнодорожный район',
-    'Жел+Окт': 'Железнодорожный район',
-    'Жел Цен': 'Железнодорожный район',
-    '': ''
+regions = {
+    'Центральный',
+    'Советский',
+    'Свердловский',
+    'Октябрьский',
+    'Ленинский',
+    'Кировский',
+    'Железнодорожный'
 }
 
 # Отключенные ресурсы
 pictures = {
-    'Холодное водоснабжение и Горячее водоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png',
-    'Холодное водоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png',
-    '': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png',
-    'Горячее водоснабжение Теплоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
+    'Холодное': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png',
+    'Горячее': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
     'Теплоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
-    'Теплоснабжение горячее водоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
-    'Теплоснабжение и горячее': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
-    'Теплоснабжение и Горячее водоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
-    'Теплоснабжение и горячее водоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
     'Электроснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png',
     'Газоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/gas.png'
 }
-
 
 footer = '<div style="clear: both"></div></body>'
 
