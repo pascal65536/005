@@ -1,5 +1,11 @@
+# JSON file
+file_name = 'causes.json'
+
+# Типы отключений
+type_causes = ['аварийное', 'плановое']
+
 # Вывод в файл
-output_file = 'index.html'
+output_file = 'causes.html'
 
 # scrapping page
 scrap_url = 'http://93.92.65.26/aspx/Gorod.htm'
