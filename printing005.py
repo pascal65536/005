@@ -24,7 +24,7 @@ def write_hide(out, name, all_cause):
     out.write(f'<p><b>Что отключат:</b> {all_cause["cause_resource"]}<p>')
     out.write(f'<p><b>Организация:</b> {all_cause["cause_company"]}<p>')
     if 'cause_company_phone' in all_cause.keys():
-        out.write(f'<p>{all_cause["cause_company_phone"]}<p>')
+        out.write(f'<p><b>Телефон:</b> {all_cause["cause_company_phone"]}<p>')
     out.write(f'<p><b>Тип отключения:</b> {all_cause["type_cause"]}<p>')
     out.write(f'<p><b>Причина отключений:</b> {all_cause["cause"]}<p>')
     out.write(f'<p><b>Когда отключат:</b> {all_cause["begin_time"]}<p>')

@@ -7,7 +7,6 @@ import template
 
 def cause_time(tr_elem):
     ret = tr_elem[2].text_content().split('    ')
-    #ret = tr_elem[2].text_content().split('\xa0')
     return_this = []
     return_this.append(ret[0].replace(u'\r\n',' ').strip())
     return_this.append(ret[1].replace(u'\r\n',' ').strip())
@@ -18,24 +17,25 @@ def cause_address_type(tr_elem):
     for type in template.type_causes:
         if type in tr_elem[1].text_content():
             ret = tr_elem[1].text_content().split(type)
-    ret[0] = ret[0].replace(u'\r\n',' ').strip().replace(u',',', ')
-    ret[1] = ret[1].replace(u'\r\n',' ').strip()
-    # этот финт удаляет ненужные символы в начале строки
-    if ret[1][0] == ',':
-        ret[1] = ret[1][1:].strip()
-    if ret[1][0] == '-':
-        ret[1] = ret[1][1:].strip()
+    ret[0] = ret[0].replace(u'\r\n',' ').strip('- ,.;').replace(u',',', ')
+    ret[1] = ret[1].replace(u'\r\n',' ')
+    ret[1] = ret[1].strip('- ,.;')
 
     return_this = ret
-    return_this[1:1] = [type]
+    return_this[1:1] = [type.capitalize()]
     return return_this
 
 
 def cause_resource(tr_elem):
     ret = tr_elem[0].text_content().split('\xa0')
-    return_this = []
-    for r in ret:
-        return_this.append(r.replace(u'\r\n',' ').strip())
+    ret = tr_elem[0].text_content().split('\r\n')
+
+    ret = list(map(str.strip, ret))
+
+    if 'т.' in ret[-1]:
+        return_this = [ret[0], ' '.join(ret[1:-1]), ret[-1].replace(u'т.',' ').strip()]
+    else:
+        return_this = [ret[0], ' '.join(ret[1:])]
     return return_this
 
 
@@ -100,4 +100,3 @@ if __name__ == '__main__':
     # dump dicts of scrap
     with open(template.file_name, 'w', encoding='utf8') as file_write:
         json.dump(scrap, file_write, indent=4, ensure_ascii=False)
-
