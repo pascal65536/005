@@ -46,12 +46,10 @@ def write_file(causes):
         out.write(template.start)
 
         for region in template.regions:
-            if len(causes[region][1]['value']) > 1:
-                name = causes[region][0]['value']['cause_region'] #.strip()
-                all_causes = causes[region]
-                write_hide(out, name, all_causes)
+            name = causes[region][0]['value']['cause_region'] #.strip()
+            all_causes = causes[region]
+            write_hide(out, name, all_causes)
 
-        out.write('\n\n\n')
         out.write(template.footer)
 
 
