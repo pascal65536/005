@@ -7,9 +7,12 @@ import template
 
 def cause_time(tr_elem):
     ret = tr_elem[2].text_content().split('    ')
-    return_this = []
-    return_this.append(ret[0].replace(u'\r\n',' ').strip())
-    return_this.append(ret[1].replace(u'\r\n',' ').strip())
+    if len(ret) == 2:
+        return_this = []
+        return_this.append(ret[0].replace(u'\r\n',' ').strip())
+        return_this.append(ret[1].replace(u'\r\n',' ').strip())
+    else:
+        return_this = ret
     return return_this
 
 
@@ -60,9 +63,11 @@ def add_new_cause(cause, findregion, tr_elem):
         strn['address'] = cause_address_type(tr_elem)[0]
         strn['type_cause'] = cause_address_type(tr_elem)[1]
         strn['cause'] = cause_address_type(tr_elem)[2]
-
-        strn['begin_time'] = cause_time(tr_elem)[0]
-        strn['end_time'] = cause_time(tr_elem)[1]
+        if len(cause_time(tr_elem)) == 2:
+            strn['begin_time'] = cause_time(tr_elem)[0]
+            strn['end_time'] = cause_time(tr_elem)[1]
+        else:
+            strn['cancel_time'] = cause_time(tr_elem)[0]
 
     # в первой колонке есть упоминание ресурса, значит этот рерурс отключат
     for pict in template.pictures:

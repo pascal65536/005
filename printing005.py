@@ -29,8 +29,11 @@ def write_hide(out, name, all_causes):
                 out.write(f'<p><b>Телефон:</b> {cause["cause_company_phone"]}<p>')
             out.write(f'<p><b>Тип отключения:</b> {cause["type_cause"]}<p>')
             out.write(f'<p><b>Причина отключений:</b> {cause["cause"]}<p>')
-            out.write(f'<p><b>Когда отключат:</b> {cause["begin_time"]}<p>')
-            out.write(f'<p><b>Когда включат:</b> {cause["end_time"]}<p>')
+            if 'cancel_time' in cause.keys():
+                out.write(f'<p><b>{cause["cancel_time"]}</b><p>')
+            else:
+                out.write(f'<p><b>Когда отключат:</b> {cause["begin_time"]}<p>')
+                out.write(f'<p><b>Когда включат:</b> {cause["end_time"]}<p>')
 
             out.write('</div></div>\n')
     out.write('</div>\n')
@@ -46,7 +49,8 @@ def write_file(causes):
         out.write(template.start)
 
         for region in template.regions:
-            name = causes[region][0]['value']['cause_region'] #.strip()
+            #name = causes[region][0]['value']['cause_region']
+            name = f'{region} район'
             all_causes = causes[region]
             write_hide(out, name, all_causes)
 
