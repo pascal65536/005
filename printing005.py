@@ -49,10 +49,12 @@ def write_file(causes):
         out.write(template.start)
 
         for region in template.regions:
-            #name = causes[region][0]['value']['cause_region']
             name = f'{region} район'
             all_causes = causes[region]
-            write_hide(out, name, all_causes)
+
+            # если у района два словаря, а второй содержит поле 'cause_out', то это район-пустышка
+            if not (len(all_causes) == 2 and 'cause_out' in all_causes[1]['value'].keys()):
+                write_hide(out, name, all_causes)
 
         out.write(template.footer)
 

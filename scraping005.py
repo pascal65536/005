@@ -76,6 +76,7 @@ def add_new_cause(cause, findregion, tr_elem):
         if pict in tr_elem[0].text_content():
             strn['cause_picture'] = template.pictures[pict]
 
+    # проверим, сколько информации в словаре, если её мало, то словарь не нужен
     s = 0
     for k, v in strn.items():
         s = s + len(v)
