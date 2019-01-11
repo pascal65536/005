@@ -21,6 +21,8 @@ regions = {
     'Железнодорожный'
 }
 
+magic_word = 'район'
+
 # Отключенные ресурсы
 pictures = {
     'Холодное': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png',

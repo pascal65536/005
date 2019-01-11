@@ -27,6 +27,7 @@ def write_hide(out, name, all_causes):
             out.write(f'<p><b>Организация:</b> {cause["cause_company"]}<p>')
             if 'cause_company_phone' in cause.keys():
                 out.write(f'<p><b>Телефон:</b> {cause["cause_company_phone"]}<p>')
+            out.write(f'<p><b>Адрес отключения:</b> {cause["address"]}<p>')
             out.write(f'<p><b>Тип отключения:</b> {cause["type_cause"]}<p>')
             out.write(f'<p><b>Причина отключений:</b> {cause["cause"]}<p>')
             if 'cancel_time' in cause.keys():
@@ -49,7 +50,7 @@ def write_file(causes):
         out.write(template.start)
 
         for region in template.regions:
-            name = f'{region} район'
+            name = f'{region} {template.magic_word}'
             all_causes = causes[region]
 
             # если у района два словаря, а второй содержит поле 'cause_out', то это район-пустышка

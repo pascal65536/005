@@ -96,7 +96,7 @@ def main(url):
 
     for tr in tr_elements:
         for region in template.regions:
-            if region in tr.cssselect('td')[1].text_content():
+            if region in tr.cssselect('td')[1].text_content() and template.magic_word in tr.cssselect('td')[1].text_content():
                 find_region = region
                 cause[find_region] = []
         if not find_region == '':
