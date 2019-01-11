@@ -20,13 +20,15 @@ def cause_address_type(tr_elem):
     for type in template.type_causes:
         if type in tr_elem[1].text_content():
             ret = tr_elem[1].text_content().split(type)
-    ret[0] = ret[0].replace(u'\r\n',' ').strip('- ,.;').replace(u',',', ')
-    ret[1] = ret[1].replace(u'\r\n',' ')
-    ret[1] = ret[1].strip('- ,.;')
-
-    return_this = ret
-    return_this[1:1] = [type.capitalize()]
-    return return_this
+    try:
+        ret[0] = ret[0].replace(u'\r\n',' ').strip('- ,.;').replace(u',',', ')
+        ret[1] = ret[1].replace(u'\r\n',' ')
+        ret[1] = ret[1].strip('- ,.;')
+        return_this = ret
+        return_this[1:1] = [type.capitalize()]
+        return return_this
+    except UnboundLocalError:
+        print('UnboundLocalError: local variable ''ret'' referenced before assignment')
 
 
 def cause_resource(tr_elem):
@@ -46,7 +48,7 @@ def add_new_cause(cause, findregion, tr_elem):
     # Заводим новый словарь
     strn = {}
 
-    # если крайние ячейки пустые, значит это название района или отключений нет
+    # если крайние ячейки пустые, значит это название района или отключений нет или пустая строчка
     if '\xa0' == tr_elem[0].text_content() and '\xa0' == tr_elem[2].text_content():
         # есть название района - значит это название района, иначе - "нет отключений"
         if findregion in tr_elem[1].text_content():
@@ -59,10 +61,10 @@ def add_new_cause(cause, findregion, tr_elem):
         strn['cause_company'] = cause_resource(tr_elem)[1]
         if len(cause_resource(tr_elem)) > 2:
             strn['cause_company_phone'] = cause_resource(tr_elem)[2]
-
-        strn['address'] = cause_address_type(tr_elem)[0]
-        strn['type_cause'] = cause_address_type(tr_elem)[1]
-        strn['cause'] = cause_address_type(tr_elem)[2]
+        if cause_address_type(tr_elem) is not None:
+            strn['address'] = cause_address_type(tr_elem)[0]
+            strn['type_cause'] = cause_address_type(tr_elem)[1]
+            strn['cause'] = cause_address_type(tr_elem)[2]
         if len(cause_time(tr_elem)) == 2:
             strn['begin_time'] = cause_time(tr_elem)[0]
             strn['end_time'] = cause_time(tr_elem)[1]
@@ -74,7 +76,11 @@ def add_new_cause(cause, findregion, tr_elem):
         if pict in tr_elem[0].text_content():
             strn['cause_picture'] = template.pictures[pict]
 
-    cause[findregion].append({'value': strn})
+    s = 0
+    for k, v in strn.items():
+        s = s + len(v)
+    if s > 2:
+        cause[findregion].append({'value': strn})
 
 def main(url):
 
@@ -92,8 +98,8 @@ def main(url):
             if region in tr.cssselect('td')[1].text_content():
                 find_region = region
                 cause[find_region] = []
-        if not find_region == '' and len(tr.text_content()) > 20:
-
+        if not find_region == '':
+            #and len(tr.text_content()) > 20:
             add_new_cause(cause, find_region, tr.cssselect('td'))
 
     return cause
