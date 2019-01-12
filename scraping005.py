@@ -7,6 +7,7 @@ import template
 
 def cause_time(tr_elem):
     ret = tr_elem[2].text_content().split('    ')
+    ret = list(map(str.strip, ret))
     if len(ret) == 2:
         return_this = []
         return_this.append(ret[0].replace(u'\r\n',' ').strip())
@@ -20,10 +21,12 @@ def cause_address_type(tr_elem):
     for type in template.type_causes:
         if type in tr_elem[1].text_content():
             ret = tr_elem[1].text_content().split(type)
+            ret = list(map(str.strip, ret))
     try:
-        ret[0] = ret[0].replace(u'\r\n',' ').strip('- ,.;').replace(u',',', ')
-        ret[1] = ret[1].replace(u'\r\n',' ')
-        ret[1] = ret[1].strip('- ,.;')
+        ret[0] = ret[0].replace(u'\r\n',' ').replace(u',',', ')
+        ret[0] = ret[0].strip('- ,.;').strip()
+        ret[1] = ret[1].replace(u'\r\n',' ').replace(u',',', ')
+        ret[1] = ret[1].strip('- ,.;').strip()
         return_this = ret
         return_this[1:1] = [type.capitalize()]
         return return_this
@@ -37,10 +40,14 @@ def cause_resource(tr_elem):
 
     ret = list(map(str.strip, ret))
 
+    if len(ret) > 2 and template.magic_water_supply == ret[1]:
+        ret.pop(1)
+        ret[0] = f'{ret[0]} {template.magic_water_supply}'
+
     if 'т.' in ret[-1]:
-        return_this = [ret[0], ' '.join(ret[1:-1]), ret[-1].replace(u'т.',' ').strip()]
+        return_this = [ret[0], ' '.join(ret[1:-1]).strip(), ret[-1].replace(u'т.',' ').strip()]
     else:
-        return_this = [ret[0], ' '.join(ret[1:])]
+        return_this = [ret[0], ' '.join(ret[1:]).strip()]
     return return_this
 
 
@@ -100,7 +107,6 @@ def main(url):
                 find_region = region
                 cause[find_region] = []
         if not find_region == '':
-            #and len(tr.text_content()) > 20:
             add_new_cause(cause, find_region, tr.cssselect('td'))
 
     return cause

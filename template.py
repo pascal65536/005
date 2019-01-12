@@ -22,6 +22,8 @@ regions = {
 }
 
 magic_word = 'район'
+magic_water_supply = 'водоснабжение'
+
 
 # Отключенные ресурсы
 pictures = {
