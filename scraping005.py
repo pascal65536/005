@@ -5,16 +5,27 @@ import json
 import template
 
 
+def clear_string_spaces(string):
+    return ' '.join(string.replace(u'\r\n',' ').split())
+
+
+def clear_all_spaces(lists):
+    return_this = []
+    for l in lists:
+        return_this.append(' '.join(l.split()))
+    return return_this
+
+
 def cause_time(tr_elem):
     ret = tr_elem[2].text_content().split('    ')
     ret = list(map(str.strip, ret))
     if len(ret) == 2:
         return_this = []
-        return_this.append(ret[0].replace(u'\r\n',' ').strip())
-        return_this.append(ret[1].replace(u'\r\n',' ').strip())
+        return_this.append(clear_string_spaces(ret[0]))
+        return_this.append(clear_string_spaces(ret[1]))
     else:
         return_this = ret
-    return return_this
+    return clear_all_spaces(return_this)
 
 
 def cause_address_type(tr_elem):
@@ -29,9 +40,9 @@ def cause_address_type(tr_elem):
         ret[1] = ret[1].strip('- ,.;').strip()
         return_this = ret
         return_this[1:1] = [type.capitalize()]
-        return return_this
+        return clear_all_spaces(return_this)
     except UnboundLocalError:
-        print('UnboundLocalError: local variable ''ret'' referenced before assignment')
+        pass
 
 
 def cause_resource(tr_elem):
@@ -48,7 +59,7 @@ def cause_resource(tr_elem):
         return_this = [ret[0], ' '.join(ret[1:-1]).strip(), ret[-1].replace(u'т.',' ').strip()]
     else:
         return_this = [ret[0], ' '.join(ret[1:]).strip()]
-    return return_this
+    return clear_all_spaces(return_this)
 
 
 def add_new_cause(cause, findregion, tr_elem):
@@ -59,9 +70,9 @@ def add_new_cause(cause, findregion, tr_elem):
     if '\xa0' == tr_elem[0].text_content() and '\xa0' == tr_elem[2].text_content():
         # есть название района - значит это название района, иначе - "нет отключений"
         if findregion in tr_elem[1].text_content():
-            strn['cause_region'] = tr_elem[1].text_content().replace(u'\r\n',' ')
+            strn['cause_region'] = clear_string_spaces(tr_elem[1].text_content())
         else:
-            strn['cause_out'] = tr_elem[1].text_content().replace(u'\r\n',' ')
+            strn['cause_out'] = clear_string_spaces(tr_elem[1].text_content())
     # если крайние ячейки не пустые, то это информация об отключении
     else:
         strn['cause_resource'] = cause_resource(tr_elem)[0]
