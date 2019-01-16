@@ -29,17 +29,19 @@ def cause_time(tr_elem):
 
 
 def cause_address_type(tr_elem):
+    this_type = ''
     for type in template.type_causes:
         if type in tr_elem[1].text_content():
             ret = tr_elem[1].text_content().split(type)
             ret = list(map(str.strip, ret))
+            this_type = type
     try:
         ret[0] = ret[0].replace(u'\r\n',' ').replace(u',',', ')
         ret[0] = ret[0].strip('- ,.;').strip()
         ret[1] = ret[1].replace(u'\r\n',' ').replace(u',',', ')
         ret[1] = ret[1].strip('- ,.;').strip()
         return_this = ret
-        return_this[1:1] = [type.capitalize()]
+        return_this[1:1] = [this_type.capitalize()]
         return clear_all_spaces(return_this)
     except UnboundLocalError:
         pass
