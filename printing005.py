@@ -51,11 +51,17 @@ def write_file(causes):
 
         for region in template.regions:
             name = f'{region} {template.magic_word}'
-            all_causes = causes[region]
+            cause = causes[region]
 
-            # если у района два словаря, а второй содержит поле 'cause_out', то это район-пустышка
-            if not (len(all_causes) == 2 and 'cause_out' in all_causes[1]['value'].keys()):
-                write_hide(out, name, all_causes)
+            # если у района словари содержат одно поле 'cause_region' и остальные поля 'cause_out',
+            # то это - район-пустышка
+            # считаем сколько строчек содержат 'cause_out'
+            count = 0
+            for c in cause:
+                if c['value'].get('cause_out') is not None:
+                    count += 1
+            if len(cause) - count > 1:
+                write_hide(out, name, cause)
 
         out.write(template.footer)
 
