@@ -26,12 +26,18 @@ def write_hide(out, name, all_causes):
                 out.write(f'<img src="{cause["cause_picture"]}" class="image" width="300" height="225">')
                 out.write('</div>')
             out.write('<div class="producttext">\n')
-
-            # Тут было нагромождение if, я вынес их в отдельный словарь
-            for l in template.list_cause:
-                if l in cause.keys():
-                    out.write(template.list_cause[l].format(cause[l]))
-
+            if 'cause_resource' in cause.keys():
+                out.write(f'<p><b>Что отключат:</b> {cause["cause_resource"]}<p>')
+            if 'cause_company' in cause.keys():
+                out.write(f'<p><b>Организация:</b> {cause["cause_company"]}<p>')
+            if 'cause_company_phone' in cause.keys():
+                out.write(f'<p><b>Телефон:</b> {cause["cause_company_phone"]}<p>')
+            if 'address' in cause.keys():
+                out.write(f'<p><b>Адрес отключения:</b> {cause["address"]}<p>')
+            if 'type_cause' in cause.keys():
+                out.write(f'<p><b>Тип отключения:</b> {cause["type_cause"]}<p>')
+            if 'cause' in cause.keys():
+                out.write(f'<p><b>Причина отключений:</b> {cause["cause"]}<p>')
             if 'cancel_time' in cause.keys():
                 out.write(f'<p><b>{cause["cancel_time"]}</b><p>')
             else:

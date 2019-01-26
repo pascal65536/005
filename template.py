@@ -34,6 +34,16 @@ pictures = {
     'Газоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/gas.png'
 }
 
+# Как будет выглядеть информация об отключении
+list_cause = {
+    'cause_resource': '<p><b>Что отключат:</b> {}<p>',
+    'cause_company': '<p><b>Организация:</b> {}<p>',
+    'cause_company_phone': '<p><b>Телефон:</b> {}<p>',
+    'address': '<p><b>Адрес отключения:</b> {}<p>',
+    'type_cause': '<p><b>Тип отключения:</b> {}<p>',
+    'cause': '<p><b>Причина отключений:</b> {}<p>'
+}
+
 footer = '<div style="clear: both"></div></body>'
 
 hid_begin = '<div class="indentation" id="comments"><div class="one-news-comments"><div class="row header comments-js" data-show=".comments-block"><h2>'
