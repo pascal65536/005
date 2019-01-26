@@ -20,21 +20,31 @@ def write_hide(out, name, all_causes):
     for all_cause in all_causes:
         if len(all_cause['value']) > 1:
             cause = all_cause['value']
-            out.write('<div class="productcard"><div class="productpic">\n')
-            out.write(f'<img src="{cause["cause_picture"]}" class="image" width="300" height="225">')
-            out.write('</div><div class="producttext">\n')
-            out.write(f'<p><b>Что отключат:</b> {cause["cause_resource"]}<p>')
-            out.write(f'<p><b>Организация:</b> {cause["cause_company"]}<p>')
+            out.write('<div class="productcard">\n')
+            if 'cause_picture' in cause.keys():
+                out.write('<div class="productpic">')
+                out.write(f'<img src="{cause["cause_picture"]}" class="image" width="300" height="225">')
+                out.write('</div>')
+            out.write('<div class="producttext">\n')
+            if 'cause_resource' in cause.keys():
+                out.write(f'<p><b>Что отключат:</b> {cause["cause_resource"]}<p>')
+            if 'cause_company' in cause.keys():
+                out.write(f'<p><b>Организация:</b> {cause["cause_company"]}<p>')
             if 'cause_company_phone' in cause.keys():
                 out.write(f'<p><b>Телефон:</b> {cause["cause_company_phone"]}<p>')
-            out.write(f'<p><b>Адрес отключения:</b> {cause["address"]}<p>')
-            out.write(f'<p><b>Тип отключения:</b> {cause["type_cause"]}<p>')
-            out.write(f'<p><b>Причина отключений:</b> {cause["cause"]}<p>')
+            if 'address' in cause.keys():
+                out.write(f'<p><b>Адрес отключения:</b> {cause["address"]}<p>')
+            if 'type_cause' in cause.keys():
+                out.write(f'<p><b>Тип отключения:</b> {cause["type_cause"]}<p>')
+            if 'cause' in cause.keys():
+                out.write(f'<p><b>Причина отключений:</b> {cause["cause"]}<p>')
             if 'cancel_time' in cause.keys():
                 out.write(f'<p><b>{cause["cancel_time"]}</b><p>')
             else:
-                out.write(f'<p><b>Когда отключат:</b> {cause["begin_time"]}<p>')
-                out.write(f'<p><b>Когда включат:</b> {cause["end_time"]}<p>')
+                if 'begin_time' in cause.keys():
+                    out.write(f'<p><b>Когда отключат:</b> {cause["begin_time"]}<p>')
+                if 'end_time' in cause.keys():
+                    out.write(f'<p><b>Когда включат:</b> {cause["end_time"]}<p>')
 
             out.write('</div></div>\n')
     out.write('</div>\n')
