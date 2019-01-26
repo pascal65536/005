@@ -23,7 +23,7 @@ def write_hide(out, name, all_causes):
             out.write('<div class="productcard">\n')
             if 'cause_picture' in cause.keys():
                 out.write('<div class="productpic">')
-                out.write(f'<img src="{cause["cause_picture"]}" class="image" width="300" height="225">')
+                out.write('<img src="{}" class="image" width="300" height="225">'.format(cause['cause_picture']))
                 out.write('</div>')
             out.write('<div class="producttext">\n')
 
@@ -33,12 +33,12 @@ def write_hide(out, name, all_causes):
                     out.write(template.list_cause[l].format(cause[l]))
 
             if 'cancel_time' in cause.keys():
-                out.write(f'<p><b>{cause["cancel_time"]}</b><p>')
+                out.write('<p><b>{}</b><p>'.format(cause['cancel_time']))
             else:
                 if 'begin_time' in cause.keys():
-                    out.write(f'<p><b>Когда отключат:</b> {cause["begin_time"]}<p>')
+                    out.write('<p><b>Когда отключат:</b> {}<p>'.format(cause['begin_time']))
                 if 'end_time' in cause.keys():
-                    out.write(f'<p><b>Когда включат:</b> {cause["end_time"]}<p>')
+                    out.write('<p><b>Когда включат:</b> {}<p>'.format(cause['end_time']))
 
             out.write('</div></div>\n')
     out.write('</div>\n')
