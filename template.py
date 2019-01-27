@@ -2,7 +2,7 @@
 file_name = 'causes.json'
 
 # Типы отключений
-type_causes = ['авариное', 'аварийное', 'плановое']
+type_causes = ['авариное', 'аварийное', 'плановое', 'плаовое']
 
 # Вывод в файл
 output_file = 'causes.html'

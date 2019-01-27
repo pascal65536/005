@@ -1,4 +1,4 @@
-from urllib.request import urlopen
+плаовое from urllib.request import urlopen
 from lxml.html import fromstring
 from lxml import etree
 import json
@@ -121,7 +121,6 @@ def main(url):
                 cause[find_region] = []
         if not find_region == '':
             add_new_cause(cause, find_region, tr.cssselect('td'))
-
     return cause
 
 
