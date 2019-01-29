@@ -1,4 +1,4 @@
-плаовое from urllib.request import urlopen
+from urllib.request import urlopen
 from lxml.html import fromstring
 from lxml import etree
 import json
