@@ -1,17 +1,17 @@
 import template
 import io
 import json
-import datetime
 
 
 def write_hide(out, name, all_causes):
-    '''
+    """
     Выводит в html-файл раскрывашку с карточками внутри
+
     :param out: файл
     :param name: название района
     :param all_causes: список отключений
     :return: ничего
-    '''
+    """
     out.write('\n\n\n')
     out.write(template.hid_begin)
     out.write(name)
@@ -53,13 +53,12 @@ def write_hide(out, name, all_causes):
 
 
 def write_file(causes):
-    '''
+    """
     Вывод в файл
-    '''
+    """
     with io.open(template.output_file, 'w') as out:
         out.write(template.style)
         out.write(template.start)
-        print(datetime.datetime.now())
 
         for region in template.regions:
             name = f'{region} {template.magic_word}'
