@@ -34,7 +34,7 @@ pictures = {
     'Газоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/gas.png'
 }
 
-footer = '<div style="clear: both"></div></body>'
+footer = '<div style="clear: both"></div>'
 
 hid_begin = '<div class="indentation" id="comments"><div class="one-news-comments"><div class="row header comments-js" data-show=".comments-block"><h2>'
 
