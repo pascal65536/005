@@ -59,6 +59,7 @@ def write_file(causes):
     with io.open(template.output_file, 'w') as out:
         out.write(template.style)
         out.write(template.start)
+        print(datetime.datetime.now())
 
         for region in template.regions:
             name = f'{region} {template.magic_word}'
