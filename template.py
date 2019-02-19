@@ -56,8 +56,11 @@ style = '<style>.flexbox {display: flex;flex-flow: row wrap;align-items: flex-st
         '}</style>'
 
 dt = datetime.datetime.now()
+ddt = dt.strftime("%d-%m-%Y")
+ddm = dt.strftime("%I:%M")
+
 start = '<p>Узнайте о плановых и неплановых отключениях воды и электроэнергии на сайте ГородскиеНовости.РФ</p>' \
         '<h3>Где в данный момент отключен свет в Красноярске.</h3>' \
-        '<p><strong>Информация обновлена в {0}.</strong></p>'.format(dt)
+        '<p><strong>Информация обновлена {0} в {1}.</strong></p>'.format(ddt, ddm)
 
 stop = '<p><img src="http://www.gornovosti.ru/media/filer_public/46/5c/465c2fed-4032-4cde-9205-473c4f94767c/otkliuchenie_vody_i_elektroenergii.jpg"></p>'
