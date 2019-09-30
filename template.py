@@ -27,11 +27,11 @@ magic_water_supply = 'водоснабжение'
 
 # Отключенные ресурсы
 pictures = {
-    'Холодное': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png',
-    'Горячее': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
-    'Теплоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png',
-    'Электроснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png',
-    'Газоснабжение': 'http://krasnoarsk.ru/wp-content/uploads/2018/11/gas.png'
+    'Холодное': 'http://krasnoarsk.ru/media/icons/tap.png',
+    'Горячее': 'http://krasnoarsk.ru/media/icons/radiator-1.png',
+    'Теплоснабжение': 'http://krasnoarsk.ru/media/icons/radiator-1.png',
+    'Электроснабжение': 'http://krasnoarsk.ru/media/icons/bulb.png',
+    'Газоснабжение': 'http://krasnoarsk.ru/media/icons/gas.png'
 }
 
 # Как будет выглядеть информация об отключении

@@ -10,25 +10,62 @@
                 "cause_resource": "Электроснабжение",
                 "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
                 "cause_company_phone": "244-03-77",
-                "address": "Киренского, 3, 3а, 5, 5а, 7, 9, 11, 11б, 13, 13а, 15",
-                "type_cause": "Аварийное",
-                "cause": "монтаж приборов учета трансформаторная подстанция 8032",
-                "begin_time": "12 августа 09-48",
-                "end_time": "12 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png"
+                "address": "Е.Стасовой 67; Минусинская; Азовская; Пасечная; Плодовая; Янтарная; Тихоновская; Садовая; Болотная; Колягинская; Черничная; СТ:Колос; Отдых; Березка; Электрик; Строитель; Локомотив; Локомотивное депо; СНТ: с/х Октябрьский",
+                "type_cause": "Плановое",
+                "cause": "ввод в работу воздушной линии от опоры № 55/1 фидер 1-02",
+                "begin_time": "30 сентября 08-00",
+                "end_time": "30 сентября 17-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         },
         {
             "value": {
-                "cause_resource": "Холодное водоснабжение",
-                "cause_company": "ООО КрасКом",
-                "cause_company_phone": "211-39-63",
-                "address": "Киренского, 87б (офисное здание)",
+                "cause_resource": "Электроснабжение",
+                "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
+                "cause_company_phone": "244-03-77",
+                "address": "Окаемная, Российская; Асеева; Защитников Ленинграда",
                 "type_cause": "Аварийное",
-                "cause": "определение утечки, топит теплотрассу",
-                "begin_time": "12 августа 07-00",
-                "end_time": "12 августа 16-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png"
+                "cause": "трансформаторная подстанция 4032, после проверки изоляции",
+                "begin_time": "30 сентября 05-27",
+                "end_time": "30 сентября 09-45",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
+            }
+        },
+        {
+            "value": {
+                "cause_resource": "Электроснабжение",
+                "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
+                "cause_company_phone": "244-03-77",
+                "address": "Колягинская; Черничная; Минусинская; Азовская; Пасечная",
+                "type_cause": "Плановое",
+                "cause": "замена опор и проводов от опоры № 55/1 фидер 1-02",
+                "begin_time": "30 сентября 08-00",
+                "end_time": "30 сентября 17-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
+            }
+        },
+        {
+            "value": {
+                "cause_resource": "Электроснабжение",
+                "cause_company": "ООО Песчанка Энерго + ООО Аквилон-электросети",
+                "address": "Норильская 36, 38",
+                "type_cause": "Аварийное",
+                "cause": "повреждение кабельной линии 10кВ, трансформаторная подстанция 226",
+                "begin_time": "30 сентября 05-45",
+                "end_time": "30 сентября 08-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
+            }
+        },
+        {
+            "value": {
+                "cause_resource": "Электроснабжение",
+                "cause_company": "ООО Песчанка Энерго",
+                "address": "Норильская 5, 6а, 8д, 16, 16и, 16ж, 36, 38",
+                "type_cause": "Аварийное",
+                "cause": "повреждение кабельной линии 10кВ, трансформаторная подстанция 226",
+                "begin_time": "30 сентября 03-38",
+                "end_time": "30 сентября 05-45",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         }
     ],
@@ -36,32 +73,6 @@
         {
             "value": {
                 "cause_region": "Железнодорожный район"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Холодное водоснабжение",
-                "cause_company": "ООО КрасКом",
-                "cause_company_phone": "211-39-63",
-                "address": "Железнодорожников 18в",
-                "type_cause": "Аварийное",
-                "cause": "земляные работы",
-                "begin_time": "12 августа 10-00",
-                "end_time": "12 августа 14-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Горячее водоснабжение",
-                "cause_company": "КрасТЭК",
-                "cause_company_phone": "243-63-86",
-                "address": "Свободный 43, 43а; Красномосковская 19, 21; Толстого 32, 34",
-                "type_cause": "Аварийное",
-                "cause": "устранение порыва в т/камере Свободный 43а - Красномосковская 28",
-                "begin_time": "12 августа 04-00",
-                "end_time": "12 августа 12-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/radiator-1.png"
             }
         }
     ],
@@ -73,15 +84,15 @@
         },
         {
             "value": {
-                "cause_resource": "Холодное водоснабжение",
-                "cause_company": "ООО КрасКом",
-                "cause_company_phone": "211-39-63",
-                "address": "Бограда 65; Урицкого 120, 124, 124б; Диктатуры Пролетариата 3, 5, 6, 10, 11, 12, 18, 20; Урицкого 120, 124, 124б; Карла Маркса 137а (дет/сад), 139",
+                "cause_resource": "Электроснабжение",
+                "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
+                "cause_company_phone": "220-19-13",
+                "address": "2-я, 3-я, 4-я Линейная; 3-я Дальневосточная; 2-я Крутогорская; Молодогвардейцев; Зои Космодемьянской",
                 "type_cause": "Аварийное",
-                "cause": "врезка временного водопровода Бограда 65",
-                "begin_time": "12 августа 14-00",
-                "end_time": "12 августа 18-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png"
+                "cause": "подстанция Нагорная фидер 10-39, повреждение в трансформаторной подстанции 699 (установка ДЭС)",
+                "begin_time": "30 сентября 03-39",
+                "end_time": "30 сентября 05-20",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         }
     ],
@@ -96,38 +107,25 @@
                 "cause_resource": "Электроснабжение",
                 "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
                 "cause_company_phone": "220-19-13",
-                "address": "Новгородская 1, 1а, 3; Джамбульская 2в, 2д",
+                "address": "Бадалыкская",
                 "type_cause": "Плановое",
-                "cause": "капитальный ремонт трансформаторная подстанция 1088",
-                "begin_time": "12 августа 08-00",
-                "end_time": "12 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png"
+                "cause": "установка приборов учета трансформаторная подстанция 139-10-1",
+                "begin_time": "30 сентября 10-00",
+                "end_time": "30 сентября 17-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         },
         {
             "value": {
-                "cause_resource": "Газоснабжение",
-                "cause_company": "АО Красноярсккрайгаз",
-                "cause_company_phone": "223-90-04",
-                "address": "Терешковой 4а, 6а, 8а; Устиновича 4, 6",
-                "type_cause": "Плановое",
-                "cause": "ремонтные работы на подземном газопроводе",
-                "begin_time": "12 августа 09-00",
-                "end_time": "15 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/gas.png"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Газоснабжение",
-                "cause_company": "АО Красноярсккрайгаз",
-                "cause_company_phone": "223-90-04",
-                "address": "Новгородская 8, 8а, 10а, 12а",
-                "type_cause": "Плановое",
-                "cause": "ремонтные работы на подземном газопроводе",
-                "begin_time": "12 августа 09-00",
-                "end_time": "16 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/gas.png"
+                "cause_resource": "Электроснабжение",
+                "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
+                "cause_company_phone": "220-19-13",
+                "address": "Весны 16; Взлетная 2; Октябрьская 1, 9; 78 Добровольческой бригады 1, 2, 2А, 3; Авиаторов 5",
+                "type_cause": "Аварийное",
+                "cause": "подстанция Весна фидер 71-05повреждение на ведомственной отпайке ТП 5059 (Енисейэнергосервис)",
+                "begin_time": "30 сентября 07-50",
+                "end_time": "30 сентября 08-37",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         }
     ],
@@ -139,7 +137,15 @@
         },
         {
             "value": {
-                "cause_out": "городских отключений не зарегистрировано"
+                "cause_resource": "Холодное водоснабжение",
+                "cause_company": "ООО КрасКом",
+                "cause_company_phone": "211-39-63",
+                "address": "Борисевича; Даурская; Тобольская; Амурская; Ширинская; Учумская; Читинская;Аральская; Квартальная; Пожарского; Спортивная; Минина; Автомобилистов; Говорова; Тамбовская; Нерчинская; 1-я, 2-я, 3-я Шинная; Шевченко; Машиностроителей",
+                "type_cause": "Плановое",
+                "cause": "замена приборов учета на насосной станции 3 подъема Черемушки",
+                "begin_time": "01 октября 00-00",
+                "end_time": "01 октября 04-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/tap.png"
             }
         }
     ],
@@ -152,66 +158,27 @@
         {
             "value": {
                 "cause_resource": "Электроснабжение",
-                "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
+                "cause_company": "ООО УК ЖСК",
                 "cause_company_phone": "221-06-96",
-                "address": "Семафорная 367, 381, 381/2, 395",
+                "address": "Красноярский рабочий 67а, 69а; Корнетова 12",
                 "type_cause": "Плановое",
-                "cause": "устранение дефектов трансформаторная подстанция 165",
-                "begin_time": "12 августа 08-00",
-                "end_time": "12 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png"
+                "cause": "ремонтные работы трансформаторная подстанция 174",
+                "begin_time": "30 сентября 08-00",
+                "end_time": "30 сентября 17-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         },
         {
             "value": {
                 "cause_resource": "Электроснабжение",
-                "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
+                "cause_company": "ООО УК ЖСК",
                 "cause_company_phone": "221-06-96",
-                "address": "Семафорная 327, 323; Якорный 14",
-                "type_cause": "Аварийное",
-                "cause": "трансформаторная подстанция 133, замена выключателя нагрузки 6кВ",
-                "begin_time": "12 августа 12-00",
-                "end_time": "12 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Холодное водоснабжение",
-                "cause_company": "ООО КрасКом",
-                "cause_company_phone": "211-39-63",
-                "address": "Щорса 44, 44а; Кочубея 2, 2а, 4, 7, 9; Гастелло 17, 20, 22, 22г",
+                "address": "Вавилова 96, 98, 100, 102",
                 "type_cause": "Плановое",
-                "cause": "замена пожарного гидранта Щорса 44",
-                "begin_time": "12 августа 09-50",
-                "end_time": "12 августа 12-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Холодное водоснабжение",
-                "cause_company": "ООО КрасКом",
-                "cause_company_phone": "211-39-63",
-                "address": "Новая 4, 6; Мичурина 65; Щербакова 55",
-                "type_cause": "Плановое",
-                "cause": "замена пожарного гидранта Новая 4",
-                "begin_time": "12 августа 12-00",
-                "end_time": "12 августа 14-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Газоснабжение",
-                "cause_company": "АО Красноярсккрайгаз",
-                "cause_company_phone": "223-90-04",
-                "address": "Красноярский рабочий 89, 93",
-                "type_cause": "Плановое",
-                "cause": "ремонтные работы на подземном газопроводе",
-                "begin_time": "12 августа 09-00",
-                "end_time": "16 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/gas.png"
+                "cause": "ремонтные работы трансформаторная подстанция 173",
+                "begin_time": "30 сентября 08-00",
+                "end_time": "30 сентября 17-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         }
     ],
@@ -224,14 +191,14 @@
         {
             "value": {
                 "cause_resource": "Электроснабжение",
-                "cause_company": "ЭУ ООО КрасКом",
-                "cause_company_phone": "201-81-06",
-                "address": "Базайская 32-136а; 45-101",
+                "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
+                "cause_company_phone": "221-06-96",
+                "address": "Гладкова 1, 5, 7, 9; Матросова 6, 10а",
                 "type_cause": "Плановое",
-                "cause": "ремонт воздушной линии комплектная трансформаторная подстанция 981",
-                "begin_time": "12 августа 10-00",
-                "end_time": "12 августа 16-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png"
+                "cause": "устранение дефектов трансформаторная подстанция 211",
+                "begin_time": "30 сентября 08-00",
+                "end_time": "30 сентября 20-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         },
         {
@@ -239,38 +206,12 @@
                 "cause_resource": "Электроснабжение",
                 "cause_company": "ПАО МРСК Сибири - Красноярскэнерго",
                 "cause_company_phone": "221-06-96",
-                "address": "60 лет Октября 61, 63, 65, 67, 69, 71, 73",
+                "address": "Матросова 8, 10а, 10б, 10в",
                 "type_cause": "Плановое",
-                "cause": "ремонт выключателя нагрузки трансформаторная подстанция 313",
-                "begin_time": "12 августа 08-00",
-                "end_time": "12 августа 17-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Электроснабжение",
-                "cause_company": "ГЭСК (ЭУ КрасКом)",
-                "cause_company_phone": "201-81-06",
-                "address": "Колхозная; Торговая; 1-я Боровая",
-                "type_cause": "Плановое",
-                "cause": "ремонт воздушной линии комплектная трансформаторная подстанция 976",
-                "begin_time": "12 августа 09-00",
-                "end_time": "12 августа 16-30",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/bulb.png"
-            }
-        },
-        {
-            "value": {
-                "cause_resource": "Холодное водоснабжение",
-                "cause_company": "ООО КрасКом",
-                "cause_company_phone": "211-39-63",
-                "address": "Парашютная 14, 14а, 16 (д/сад), 18, 20; Медицинский 39а; Электриков 46д",
-                "type_cause": "Плановое",
-                "cause": "перекладка водопровода Парашютная 18а. Подвоз питьевой воды по графику: 1. Парашютная 14 с 14.00-14.30 2. Парашютная 16 (дет/дом) -по звонку",
-                "begin_time": "12 августа 10-00",
-                "end_time": "12 августа 18-00",
-                "cause_picture": "http://krasnoarsk.ru/wp-content/uploads/2018/11/tap.png"
+                "cause": "устранение дефектов трансформаторная подстанция 213",
+                "begin_time": "30 сентября 08-00",
+                "end_time": "30 сентября 12-00",
+                "cause_picture": "http://krasnoarsk.ru/media/icons/bulb.png"
             }
         }
     ]
